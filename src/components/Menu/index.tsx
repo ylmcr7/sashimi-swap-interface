@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Info, BookOpen, Code, PieChart, MessageCircle } from 'react-feather'
+import { Code, PieChart, MessageCircle, Twitter, Send, Users, Sunrise, DollarSign } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -78,8 +78,6 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
-
 export default function Menu() {
   const node = useRef<HTMLDivElement>()
   const [open, toggle] = useToggle(false)
@@ -94,25 +92,37 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap.org/">
-            <Info size={14} />
-            About
+          <MenuItem id="link" href="https://sashimi.cool/farms">
+            <Sunrise size={14} />
+            Farms
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.org/docs/v2">
-            <BookOpen size={14} />
-            Docs
-          </MenuItem>
-          <MenuItem id="link" href={CODE_LINK}>
+          <MenuItem id="link" href="https://github.com/SashimiProject/sashimi-swap-interface">
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/EwFs3Pp">
+          <MenuItem id="link" href="https://snapshot.sashimi.cool/">
+            <Users size={14} />
+            Proposal
+          </MenuItem>
+          <MenuItem id="link" href="https://discord.gg/zTdmUkb">
             <MessageCircle size={14} />
             Discord
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.info/">
+          <MenuItem id="link" href="https://t.me/joinchat/KABj-Bz6CVzyi23HK2rjzA">
+            <Send size={14} />
+            Telegram
+          </MenuItem>
+          <MenuItem id="link" href="https://twitter.com/SASHIMISASHIMI5">
+            <Twitter size={14} />
+            Twitter
+          </MenuItem>
+          <MenuItem id="link" href="#">
             <PieChart size={14} />
-            Analytics
+            !Analytics
+          </MenuItem>
+          <MenuItem id="link" href="#">
+            <DollarSign size={14} />
+            !Staking
           </MenuItem>
         </MenuFlyout>
       )}
