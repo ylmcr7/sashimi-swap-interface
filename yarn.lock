@@ -1987,6 +1987,39 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@sashimiswap/core@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.0.tgz#474ad04b9d19c308ca750e0e068a7058e62d744d"
+  integrity sha512-FeoE/Wu0v89Lf3WX2Q8APWOEEnpWJm9ppOIMoA+XWf0c54kD8ubdkaBBwrqivQrBfRTHWIEj4Pc2IiGW6Px0Yg==
+
+"@sashimiswap/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.1.tgz#ca6231448be0ab29d84d75d2073903c290be6219"
+  integrity sha512-Z6Tpqcaw9p6/XfVP6tcFWip8eitNhi6Ur/VTbNlX1D92Ilddby8Vib8d/Igx5ArkWjBGdLyV8fX65j9+P2Z6zA==
+  dependencies:
+    "@sashimiswap/periphery" "1.0.0"
+
+"@sashimiswap/periphery@1.0.0", "@sashimiswap/periphery@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/periphery/-/periphery-1.0.0.tgz#b299d87ede357f45dc692ae51b6462fdd9c4d1d4"
+  integrity sha512-HynXpeclyRzgSvV9h5TbcYLiOBpH9C7c07yEsDMQMBbNHQh1kSw915pqR0kXHK4jIzH035OfzMWSfGGC9HIjSQ==
+  dependencies:
+    "@sashimiswap/core" "1.0.0"
+    "@uniswap/lib" "1.1.1"
+
+"@sashimiswap/sdk@^1.0.0-kovan":
+  version "1.0.0-kovan"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.0-kovan.tgz#7cafe34eadc2987ca462aa9ec1a235b1bf9fcf90"
+  integrity sha512-GsoZ5lrxRTYGX0otCgqyKutlvTMFar0C5D5mYsbhJW73/NusS1CjdfZkb91OFeSoEzuzK9HC0ZP2CTkcahl97w==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@styled-system/background@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@styled-system/background/-/background-5.1.2.tgz#75c63d06b497ab372b70186c0bf608d62847a2ba"
@@ -12232,6 +12265,13 @@ react-app-polyfill@^1.0.6:
     raf "^3.4.1"
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
+
+react-app-rewired@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/react-app-rewired/-/react-app-rewired-2.1.6.tgz#33ee3076a7f34d6a7c94e649cac67e7c8c580de8"
+  integrity sha512-06flj0kK5tf/RN4naRv/sn6j3sQd7rsURoRLKLpffXDzJeNiAaTNic+0I8Basojy5WDwREkTqrMLewSAjcb13w==
+  dependencies:
+    semver "^5.6.0"
 
 react-clientside-effect@^1.2.2:
   version "1.2.2"
