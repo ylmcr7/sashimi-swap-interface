@@ -1992,14 +1992,14 @@
   resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.0.tgz#474ad04b9d19c308ca750e0e068a7058e62d744d"
   integrity sha512-FeoE/Wu0v89Lf3WX2Q8APWOEEnpWJm9ppOIMoA+XWf0c54kD8ubdkaBBwrqivQrBfRTHWIEj4Pc2IiGW6Px0Yg==
 
-"@sashimiswap/core@^1.0.1":
+"@sashimiswap/core@1.0.1", "@sashimiswap/core@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.1.tgz#ca6231448be0ab29d84d75d2073903c290be6219"
   integrity sha512-Z6Tpqcaw9p6/XfVP6tcFWip8eitNhi6Ur/VTbNlX1D92Ilddby8Vib8d/Igx5ArkWjBGdLyV8fX65j9+P2Z6zA==
   dependencies:
     "@sashimiswap/periphery" "1.0.0"
 
-"@sashimiswap/periphery@1.0.0", "@sashimiswap/periphery@^1.0.0":
+"@sashimiswap/periphery@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@sashimiswap/periphery/-/periphery-1.0.0.tgz#b299d87ede357f45dc692ae51b6462fdd9c4d1d4"
   integrity sha512-HynXpeclyRzgSvV9h5TbcYLiOBpH9C7c07yEsDMQMBbNHQh1kSw915pqR0kXHK4jIzH035OfzMWSfGGC9HIjSQ==
@@ -2007,10 +2007,18 @@
     "@sashimiswap/core" "1.0.0"
     "@uniswap/lib" "1.1.1"
 
-"@sashimiswap/sdk@^1.0.0-kovan":
-  version "1.0.0-kovan"
-  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.0-kovan.tgz#7cafe34eadc2987ca462aa9ec1a235b1bf9fcf90"
-  integrity sha512-GsoZ5lrxRTYGX0otCgqyKutlvTMFar0C5D5mYsbhJW73/NusS1CjdfZkb91OFeSoEzuzK9HC0ZP2CTkcahl97w==
+"@sashimiswap/periphery@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/periphery/-/periphery-1.0.1.tgz#04a0df062dfb0e65702971867a33b4fde6dd6174"
+  integrity sha512-6ARRRUFixNBCk7wGouErbNsulxBc5a53Et5OB1atqKe1l6gK9Zlh0pYY/AdP2b2R3UoFVjUwX66TN7fB1WHOEQ==
+  dependencies:
+    "@sashimiswap/core" "1.0.1"
+    "@uniswap/lib" "1.1.1"
+
+"@sashimiswap/sdk@^1.0.1-kovan":
+  version "1.0.1-kovan"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.1-kovan.tgz#54a094c09592652277df6efc06338a027d0d107e"
+  integrity sha512-qWmFEul+bLqqImjQEwktnfpExoRZV6Gi5W1KiEd1BH0ADmhZcd841ujbQdTjE+msnVjgKLoDX4K+vs4zq312MQ==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"

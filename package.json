@@ -4,9 +4,9 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
-    "@sashimiswap/sdk": "^1.0.0-kovan",
+    "@sashimiswap/sdk": "^1.0.1-kovan",
     "@sashimiswap/core": "^1.0.1",
-    "@sashimiswap/periphery": "^1.0.0"
+    "@sashimiswap/periphery": "^1.0.1"
   },
   "devDependencies": {
     "@ethersproject/experimental": "^5.0.1",
