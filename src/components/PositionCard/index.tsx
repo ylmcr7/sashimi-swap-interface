@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { useTotalSupply } from '../../data/TotalSupply'
 
 import { useActiveWeb3React } from '../../hooks'
+import { ExternalLink } from '../../theme'
 import { useTokenBalance } from '../../state/wallet/hooks'
 import { currencyId } from '../../utils/currencyId'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
@@ -17,7 +18,7 @@ import Card, { GreyCard } from '../Card'
 import { AutoColumn } from '../Column'
 import CurrencyLogo from '../CurrencyLogo'
 import DoubleCurrencyLogo from '../DoubleLogo'
-import { RowBetween, RowFixed } from '../Row'
+import { AutoRow, RowBetween, RowFixed } from '../Row'
 import { Dots } from '../swap/styleds'
 
 export const FixedHeightRow = styled(RowBetween)`
@@ -222,11 +223,11 @@ export default function FullPositionCard({ pair, border }: PositionCardProps) {
               </Text>
             </FixedHeightRow>
 
-            {/*<AutoRow justify="center" marginTop={'10px'}>*/}
-            {/*  <ExternalLink href={`https://uniswap.info/pair/${pair.liquidityToken.address}`}>*/}
-            {/*    View pool information ↗*/}
-            {/*  </ExternalLink>*/}
-            {/*</AutoRow>*/}
+            <AutoRow justify="center" marginTop={'10px'}>
+              <ExternalLink href={`https://info-test.sashimi.cool/pair/${pair.liquidityToken.address}`}>
+                View pool information ↗
+              </ExternalLink>
+            </AutoRow>
             <RowBetween marginTop="10px">
               <ButtonSecondary as={Link} to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`} width="48%">
                 Add

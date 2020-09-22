@@ -1,8 +1,12 @@
 import React, { Suspense } from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
+import {
+  Layout
+} from 'antd'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
-import Header from '../components/Header'
+import Header, { HeaderControls } from '../components/Header'
+import Footer from '../components/Footer'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
@@ -19,39 +23,44 @@ import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redir
 import Swap from './Swap'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 
+const {
+  Header: LayoutHeader
+} = Layout;
+
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
-`
-
-const HeaderWrapper = styled.div`
-  ${({ theme }) => theme.flexRowNoWrap}
-  width: 100%;
-  justify-content: space-between;
+  position: relative;
 `
 
 const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 160px;
   align-items: center;
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 10;
-
+  margin-top: 16px;
+  z-index: 1;
+  min-height: calc(100vh - 200px);
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
       padding: 16px;
   `};
-
-  z-index: 1;
 `
 
 const Marginer = styled.div`
   margin-top: 5rem;
+`
+
+const StyledHeader = styled(LayoutHeader)`
+  width: 100%;
+  background: ${props => props.theme.bg1};
+  @media(max-width: 576px) {
+    padding: 0;
+  }
 `
 
 export default function App() {
@@ -61,10 +70,11 @@ export default function App() {
         <Route component={GoogleAnalyticsReporter} />
         <Route component={DarkModeQueryParamReader} />
         <AppWrapper>
-          <HeaderWrapper>
+          <StyledHeader>
             <Header />
-          </HeaderWrapper>
+          </StyledHeader>
           <BodyWrapper>
+            <HeaderControls />
             <Popups />
             <Web3ReactManager>
               <Switch>
@@ -84,6 +94,7 @@ export default function App() {
             </Web3ReactManager>
             <Marginer />
           </BodyWrapper>
+          <Footer />
         </AppWrapper>
       </HashRouter>
     </Suspense>

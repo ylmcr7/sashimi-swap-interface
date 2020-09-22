@@ -7,11 +7,10 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.svg'
 import LogoDark from '../../assets/svg/logo_white.svg'
-import Wordmark from '../../assets/svg/wordmark.svg'
-import WordmarkDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
+import Nav from './Nav'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
@@ -26,12 +25,8 @@ const HeaderFrame = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-  top: 0;
-  position: absolute;
   z-index: 2;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    padding: 12px 0 0 0;
-    width: calc(100%);
     position: relative;
   `};
 `
@@ -44,10 +39,6 @@ const HeaderElement = styled.div`
 const HeaderElementWrap = styled.div`
   display: flex;
   align-items: center;
-
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    margin-top: 0.5rem;
-`};
 `
 
 const Title = styled.a`
@@ -61,11 +52,12 @@ const Title = styled.a`
 `
 
 const TitleText = styled(Row)`
-  width: fit-content;
-  white-space: nowrap;
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
-    display: none;
-  `};
+  color: ${props => props.theme.text6};
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-left: 8px;
 `
 
 const AccountElement = styled.div<{ active: boolean }>`
@@ -101,21 +93,19 @@ const UniIcon = styled.div`
   :hover {
     transform: rotate(-5deg);
   }
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img { 
-      width: 4.5rem;
-    }
-  `};
 `
 
-const HeaderControls = styled.div`
+const Controls = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 16px;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
   `};
 `
 
@@ -123,6 +113,13 @@ const BalanceText = styled(Text)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     display: none;
   `};
+`
+
+const StyledRow = styled(RowBetween)`
+  padding: 0 16px;
+  @media (max-width: 414px) {
+    padding:0 12px;
+  }
 `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
@@ -133,45 +130,55 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.KOVAN]: 'Kovan'
 }
 
-export default function Header() {
-  const { account, chainId } = useActiveWeb3React()
+const StyledLogo = styled.img`
+  height: 32px;
+`
 
-  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+export default function Header() {
   const [isDark] = useDarkModeManager()
 
   return (
     <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
+      <StyledRow>
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
+              <StyledLogo src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
             <TitleText>
-              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
+              SashimiSwap
             </TitleText>
           </Title>
         </HeaderElement>
-        <HeaderControls>
-          <HeaderElement>
-            <TestnetWrapper>
-              {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
-            </TestnetWrapper>
-            <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-              {account && userEthBalance ? (
-                <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} ETH
-                </BalanceText>
-              ) : null}
-              <Web3Status />
-            </AccountElement>
-          </HeaderElement>
-          <HeaderElementWrap>
-            <Settings />
-            <Menu />
-          </HeaderElementWrap>
-        </HeaderControls>
-      </RowBetween>
+        <Nav />
+      </StyledRow>
     </HeaderFrame>
   )
+}
+
+export function HeaderControls() {
+  const { account, chainId } = useActiveWeb3React()
+
+  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+  return (
+    <Controls>
+      <HeaderElement>
+        <TestnetWrapper>
+          {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
+        </TestnetWrapper>
+        <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
+          {account && userEthBalance ? (
+            <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
+              {userEthBalance?.toSignificant(4)} ETH
+            </BalanceText>
+          ) : null}
+          <Web3Status />
+        </AccountElement>
+      </HeaderElement>
+      <HeaderElementWrap>
+        <Settings />
+        <Menu />
+      </HeaderElementWrap>
+    </Controls>
+  );
 }

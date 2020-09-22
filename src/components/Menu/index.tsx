@@ -116,11 +116,11 @@ export default function Menu() {
             <Twitter size={14} />
             Twitter
           </MenuItem>
-          <MenuItem id="link" href="#">
+          <MenuItem id="link" href="https://info.sashimi.cool">
             <PieChart size={14} />
-            !Analytics
+            Analytics
           </MenuItem>
-          <MenuItem id="link" href="#">
+          <MenuItem id="link" href="https://sashimi.cool/staking">
             <DollarSign size={14} />
             !Staking
           </MenuItem>

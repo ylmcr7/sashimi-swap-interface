@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom'
 import ReactGA from 'react-ga'
 import { Provider } from 'react-redux'
 import { NetworkContextName } from './constants'
+import Mobile from './contexts/Mobile'
 import './i18n'
 import App from './pages/App'
 import store from './state'
@@ -60,8 +61,10 @@ ReactDOM.render(
         <Provider store={store}>
           <Updaters />
           <ThemeProvider>
-            <ThemedGlobalStyle />
-            <App />
+            <Mobile>
+              <ThemedGlobalStyle />
+              <App />
+            </Mobile>
           </ThemeProvider>
         </Provider>
       </Web3ProviderNetwork>
