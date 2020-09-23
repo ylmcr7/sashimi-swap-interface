@@ -3,6 +3,9 @@
   "description": "Uniswap Interface",
   "homepage": ".",
   "private": true,
+  "dependencies": {
+    "@sashimiswap/sdk": "^1.0.0-uni"
+  },
   "devDependencies": {
     "@ethersproject/experimental": "^5.0.1",
     "@popperjs/core": "^2.4.4",
@@ -59,6 +62,7 @@
     "prettier": "^1.17.0",
     "qs": "^6.9.4",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.6",
     "react-device-detect": "^1.6.2",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
@@ -83,9 +87,9 @@
     "@walletconnect/web3-provider": "1.1.1-alpha.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'"
