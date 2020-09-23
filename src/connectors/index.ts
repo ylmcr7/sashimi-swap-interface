@@ -39,18 +39,21 @@ export const walletconnect = new WalletConnectConnector({
 })
 
 // mainnet only
+// todo: 修改钱包连接的api key
 export const fortmatic = new FortmaticConnector({
   apiKey: FORMATIC_KEY ?? '',
   chainId: 1
 })
 
 // mainnet only
+// todo: 修改钱包连接的id
 export const portis = new PortisConnector({
   dAppId: PORTIS_ID ?? '',
   networks: [1]
 })
 
 // mainnet only
+// todo: 修改钱包连接的配置
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
   appName: 'Uniswap',
