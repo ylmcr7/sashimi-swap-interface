@@ -1,7 +1,7 @@
 // the Uniswap Default token list lives here
 // todo: 修改token list url
 export const DEFAULT_TOKEN_LIST_URL =
-  'https://raw.githubusercontent.com/SashimiProject/token-list/kovan/sashimiswap.tokenlist.json'
+  'https://raw.githubusercontent.com/SashimiProject/token-list/master/sashimiswap.tokenlist.json'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,

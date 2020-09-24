@@ -26,6 +26,8 @@ const HeaderFrame = styled.div`
   flex-direction: column;
   width: 100%;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     position: relative;
   `};
@@ -102,6 +104,10 @@ const Controls = styled.div`
   width: 100%;
   justify-content: flex-end;
   margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-right: 16px;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-direction: row;

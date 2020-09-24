@@ -2046,12 +2046,19 @@
   resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.0.tgz#474ad04b9d19c308ca750e0e068a7058e62d744d"
   integrity sha512-FeoE/Wu0v89Lf3WX2Q8APWOEEnpWJm9ppOIMoA+XWf0c54kD8ubdkaBBwrqivQrBfRTHWIEj4Pc2IiGW6Px0Yg==
 
-"@sashimiswap/core@1.0.1", "@sashimiswap/core@^1.0.1":
+"@sashimiswap/core@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.1.tgz#ca6231448be0ab29d84d75d2073903c290be6219"
   integrity sha512-Z6Tpqcaw9p6/XfVP6tcFWip8eitNhi6Ur/VTbNlX1D92Ilddby8Vib8d/Igx5ArkWjBGdLyV8fX65j9+P2Z6zA==
   dependencies:
     "@sashimiswap/periphery" "1.0.0"
+
+"@sashimiswap/core@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/core/-/core-1.0.2.tgz#13b4383930c84f2b8395a30a07ee932121936439"
+  integrity sha512-TLn9Z9vP263ZKpJb7sMQMvHF25GW866Ng29EUcRhZ/8LPqI42y4Wyy/RamdvhZSbjcfooyxzfS/qZurNqoltnQ==
+  dependencies:
+    "@sashimiswap/periphery" "1.0.1"
 
 "@sashimiswap/periphery@1.0.0":
   version "1.0.0"
@@ -2061,7 +2068,7 @@
     "@sashimiswap/core" "1.0.0"
     "@uniswap/lib" "1.1.1"
 
-"@sashimiswap/periphery@^1.0.1":
+"@sashimiswap/periphery@1.0.1", "@sashimiswap/periphery@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@sashimiswap/periphery/-/periphery-1.0.1.tgz#04a0df062dfb0e65702971867a33b4fde6dd6174"
   integrity sha512-6ARRRUFixNBCk7wGouErbNsulxBc5a53Et5OB1atqKe1l6gK9Zlh0pYY/AdP2b2R3UoFVjUwX66TN7fB1WHOEQ==
@@ -2069,10 +2076,10 @@
     "@sashimiswap/core" "1.0.1"
     "@uniswap/lib" "1.1.1"
 
-"@sashimiswap/sdk@^1.0.1-kovan":
-  version "1.0.1-kovan"
-  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.1-kovan.tgz#54a094c09592652277df6efc06338a027d0d107e"
-  integrity sha512-qWmFEul+bLqqImjQEwktnfpExoRZV6Gi5W1KiEd1BH0ADmhZcd841ujbQdTjE+msnVjgKLoDX4K+vs4zq312MQ==
+"@sashimiswap/sdk@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.2.tgz#470f3c18808a3eb72b2068e90280847d8d65dd3f"
+  integrity sha512-I/G2llumhRNOEg6mIjcHCQjfaRx0iYiYiXmZFKJPu/56fH8yiuysN/ES4Gt6dk2ny19KQvdZkhAuWwJgnu01dA==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"

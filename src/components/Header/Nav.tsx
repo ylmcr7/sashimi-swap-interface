@@ -29,12 +29,12 @@ interface Link {
 
 const links:Link[] = [
   {
-    link: 'https://test.sashimi.cool/',
+    link: '/',
     text: 'Home',
     isExternal: true
   },
   {
-    link: 'https://test.sashimi.cool/farms',
+    link: '/farms',
     text: 'Farms',
     isExternal: true
   },
@@ -43,12 +43,12 @@ const links:Link[] = [
     text: 'Exchanges'
   },
   {
-    link: 'https://test.sashimi.cool/staking',
+    link: '/staking',
     text: 'Staking',
     isExternal: true
   },
   {
-    link: 'https://test.sashimi.cool/investment',
+    link: '/investment',
     text: 'Investment',
     isExternal: true
   },
