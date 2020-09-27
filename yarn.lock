@@ -2076,10 +2076,10 @@
     "@sashimiswap/core" "1.0.1"
     "@uniswap/lib" "1.1.1"
 
-"@sashimiswap/sdk@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.2.tgz#470f3c18808a3eb72b2068e90280847d8d65dd3f"
-  integrity sha512-I/G2llumhRNOEg6mIjcHCQjfaRx0iYiYiXmZFKJPu/56fH8yiuysN/ES4Gt6dk2ny19KQvdZkhAuWwJgnu01dA==
+"@sashimiswap/sdk@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@sashimiswap/sdk/-/sdk-1.0.3.tgz#c2953cb93c3242bfdccc7ffdd0c3e818034cfb09"
+  integrity sha512-W06ueshwA+ICIToBNl8b9BaFWT2aG2EBrxB81CH0QCTk2N0gRp+VL831aaZt2sM2DYZxa3n1cA8WfDKVEXtHFw==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"

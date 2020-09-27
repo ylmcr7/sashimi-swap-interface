@@ -122,7 +122,7 @@ export default function Menu() {
           </MenuItem>
           <MenuItem id="link" href="https://sashimi.cool/staking">
             <DollarSign size={14} />
-            !Staking
+            Staking
           </MenuItem>
         </MenuFlyout>
       )}

@@ -39,7 +39,12 @@ const links:Link[] = [
     isExternal: true
   },
   {
-    link: '#',
+    link: '/double-farms',
+    text: 'Double Farm(Beta)',
+    isExternal: true
+  },
+  {
+    link: '/swap',
     text: 'Exchanges'
   },
   {
@@ -50,6 +55,11 @@ const links:Link[] = [
   {
     link: '/investment',
     text: 'Investment',
+    isExternal: true
+  },
+  {
+    link: '/vault',
+    text: 'Vault',
     isExternal: true
   },
   {
@@ -70,7 +80,7 @@ const OverLay = () => {
             <Menu.Item key={v.text}>
               {
                 v.isExternal ? (
-                  <ExternalLink href={v.link} target={v.target}>{v.text}</ExternalLink>
+                  <ExternalLink href={v.link} target={v.target || '_self'}>{v.text}</ExternalLink>
                 ) : (
                   <StyledLink exact activeClassName="active" to={v.link}>{v.text}</StyledLink>
                 )
@@ -106,7 +116,7 @@ const Nav: React.FC = () => {
         <StyledNav>
           {
             links.map(v => v.isExternal ? (
-              <StyledExternalLink key={v.text} href={v.link} target={v.target}>{v.text}</StyledExternalLink>
+              <StyledExternalLink key={v.text} href={v.link} target={v.target || '_self'}>{v.text}</StyledExternalLink>
             ) : (
               <StyledLink
                 exact

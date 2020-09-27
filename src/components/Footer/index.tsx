@@ -74,6 +74,16 @@ const Footer = () => {
           Github
         </StyledLink>
       </StyledFooterItem>
+      <StyledFooterItem>
+        <StyledLink target="_blank" href="https://sashimi.cool/files/SashimiSwap_protocol.pdf">
+          Docs
+        </StyledLink>
+      </StyledFooterItem>
+      <StyledFooterItem>
+        <StyledLink target="_blank" href="https://sashimi.cool/files/sashimi_audit_report.pdf">
+          Audit Report
+        </StyledLink>
+      </StyledFooterItem>
     </StyledFooter>
   )
 }
