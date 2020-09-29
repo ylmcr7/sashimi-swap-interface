@@ -41,7 +41,7 @@ const Footer = () => {
       <StyledFooterItem>
         <StyledLink
           target="_blank"
-          href={`https://etherscan.io/address/0x89d5F2E52D36b85e72e25e8fE46d709D445c03Fc#code`}
+          href={`https://etherscan.io/address/0xC28E27870558cF22ADD83540d2126da2e4b464c2#code`}
         >
           Sashimi Contract
         </StyledLink>
@@ -49,7 +49,7 @@ const Footer = () => {
       <StyledFooterItem>
         <StyledLink
           target="_blank"
-          href={`https://etherscan.io/address/0x042036D6F0b5C246aA07Dd9688b46cf86Bd179C3#code`}
+          href={`https://etherscan.io/address/0x1DaeD74ed1dD7C9Dabbe51361ac90A69d851234D#code`}
         >
           MasterChef Contract
         </StyledLink>

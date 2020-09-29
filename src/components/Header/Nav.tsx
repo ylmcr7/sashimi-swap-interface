@@ -63,8 +63,14 @@ const links:Link[] = [
     isExternal: true
   },
   {
+    link: 'https://info.sashimi.cool/',
+    text: 'Info↗',
+    isExternal: true,
+    target: '_blank'
+  },
+  {
     link: 'https://snapshot.sashimi.cool/#/sashimi',
-    text: 'Proposals',
+    text: 'Proposals↗',
     isExternal: true,
     target: "_blank"
   }
