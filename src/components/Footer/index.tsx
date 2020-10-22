@@ -84,6 +84,16 @@ const Footer = () => {
           Audit Report
         </StyledLink>
       </StyledFooterItem>
+      <StyledFooterItem>
+        <StyledLink target="_blank" href="https://sashimi.cool/api/farms/getList">
+          APY API
+        </StyledLink>
+      </StyledFooterItem>
+      <StyledFooterItem>
+        <StyledLink target="_blank" href="https://coinmarketcap.com/currencies/sashimi">
+          Coin Market Cap
+        </StyledLink>
+      </StyledFooterItem>
     </StyledFooter>
   )
 }
