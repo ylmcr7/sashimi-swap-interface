@@ -55,7 +55,7 @@ const Footer = () => {
         </StyledLink>
       </StyledFooterItem>
       <StyledFooterItem>
-        <StyledLink target="_blank" href="https://discord.gg/zTdmUkb">
+        <StyledLink target="_blank" href="https://discord.com/invite/mSEc2uv">
           Discord
         </StyledLink>
       </StyledFooterItem>

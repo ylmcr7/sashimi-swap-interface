@@ -104,7 +104,7 @@ export default function Menu() {
             <Users size={14} />
             Proposal
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/zTdmUkb">
+          <MenuItem id="link" href="https://discord.com/invite/mSEc2uv">
             <MessageCircle size={14} />
             Discord
           </MenuItem>
