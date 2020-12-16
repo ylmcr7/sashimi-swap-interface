@@ -75,7 +75,7 @@ const Footer = () => {
         </StyledLink>
       </StyledFooterItem>
       <StyledFooterItem>
-        <StyledLink target="_blank" href="https://sashimi.cool/files/SashimiSwap_protocol.pdf">
+        <StyledLink target="_blank" href="https://docs.sashimi.cool">
           Docs
         </StyledLink>
       </StyledFooterItem>

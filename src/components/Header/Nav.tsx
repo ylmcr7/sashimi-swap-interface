@@ -39,8 +39,8 @@ const links:Link[] = [
     isExternal: true
   },
   {
-    link: '/double-farms',
-    text: 'Double Farm(Beta)',
+    link: '/lending/#/',
+    text: 'Lending',
     isExternal: true
   },
   {
