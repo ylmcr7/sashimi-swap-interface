@@ -27,9 +27,13 @@ const StyledFooter = styled.div`
 const StyledFooterItem = styled.div`
   width: 16.66%;
   @media (max-width: 576px) {
-    width: 33.33%
+    width: 50%
   }
-`
+`;
+
+const StyledFooterItemNone = styled.div`
+  display: none;
+`;
 
 const StyledLink = styled(ExternalLink)`
   color: #ffffff;
@@ -89,11 +93,11 @@ const Footer = () => {
           APY API
         </StyledLink>
       </StyledFooterItem>
-      <StyledFooterItem>
+      <StyledFooterItemNone>
         <StyledLink target="_blank" href="https://coinmarketcap.com/currencies/sashimi">
           Coin Market Cap
         </StyledLink>
-      </StyledFooterItem>
+      </StyledFooterItemNone>
     </StyledFooter>
   )
 }
